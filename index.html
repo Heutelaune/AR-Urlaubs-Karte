@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Urlaubskarte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="info-box">
+        <h2>AR Urlaubskarte - Kameratest</h2>
+        <p>Wir testen zuerst, ob auf dein Gerät auf die Kamera zugreifen kann.</p>
+        <button id="test-camera" class="button">Kamerazugriff testen</button>
+        <a class="button" href="https://raw.githubusercontent.com/AR-js-org/AR.js/master/data/images/hiro.png" download="ar-marker.png" target="_blank">Marker herunterladen</a>
+        <div id="error-message"></div>
+    </div>
+
+    <div id="camera-test">
+        <h2>Kamera-Test</h2>
+        <p>Wenn du dein Kamerabild unten siehst, funktioniert der Kamerazugriff!</p>
+        <video id="video-element" autoplay playsinline></video>
+        <div>
+            <button id="continue-button" class="button">AR-Anwendung starten</button>
+        </div>
+    </div>
+
+    <div id="ar-info">
+        <p>Halte die Kamera auf den Marker, um die tropische Insel zu sehen.</p>
+    </div>
+
+    <div id="loading-indicator">
+        <h3>AR wird geladen...</h3>
+        <p>Bitte warten...</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

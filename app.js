@@ -245,16 +245,17 @@ document.addEventListener('DOMContentLoaded', function() {
             island.setAttribute('color', '#C2B280');
             island.setAttribute('animation', 'property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear');
             marker.appendChild(island);
-            
+
             // Wasser um die Insel - mit Animation
             const water = document.createElement('a-ring');
-            water.setAttribute('position', '0 0.12 0');
+            water.setAttribute('position', '0 0.05 0');  // Positionierung knapp unterhalb der Insel
+            water.setAttribute('rotation', '-90 0 0');   // Rotation um 90 Grad, um horizontal zu liegen
             water.setAttribute('radius-inner', '1.5');
             water.setAttribute('radius-outer', '3');
             water.setAttribute('color', '#1E90FF');
-            water.setAttribute('animation', 'property: rotation; to: 0 -360 0; loop: true; dur: 15000; easing: linear');
+            water.setAttribute('animation', 'property: rotation; to: -90 0 360; loop: true; dur: 15000; easing: linear');
             marker.appendChild(water);
-            
+
             // Hauptpalme mit hellerem Stamm für bessere Sichtbarkeit
             const palmTrunk = document.createElement('a-cylinder');
             palmTrunk.setAttribute('position', '0.5 0.7 0.5');
@@ -262,7 +263,7 @@ document.addEventListener('DOMContentLoaded', function() {
             palmTrunk.setAttribute('height', '1.2');
             palmTrunk.setAttribute('color', '#A0522D');
             marker.appendChild(palmTrunk);
-            
+
             const palmLeaves = document.createElement('a-cone');
             palmLeaves.setAttribute('position', '0.5 1.4 0.5');
             palmLeaves.setAttribute('radius-bottom', '0.8');
@@ -271,7 +272,7 @@ document.addEventListener('DOMContentLoaded', function() {
             palmLeaves.setAttribute('color', '#32CD32');
             palmLeaves.setAttribute('animation', 'property: rotation; to: 0 360 0; loop: true; dur: 20000; easing: linear');
             marker.appendChild(palmLeaves);
-            
+
             // Größerer Text für bessere Lesbarkeit
             const textTitle = document.createElement('a-text');
             textTitle.setAttribute('value', 'Tropisches Paradies');
